@@ -7,6 +7,7 @@ let doneIcon = '<i class="fas fa-check-circle fa-2x"></i>'
 let add = document.getElementById('add');
 add.addEventListener('click', function(){
     let taskName = document.getElementById('task').value;
+    document.getElementById('task').value=""; //入力を消す
     let li = document.createElement('li');
     li.append(taskName);
     document.getElementById('not-yet').appendChild(li);
@@ -25,14 +26,21 @@ add.addEventListener('click', function(){
     done.innerHTML = doneIcon;
     buttons.appendChild(done);
 
+// - 未完了を削除する処理
+    remove.addEventListener('click', function(){
+        let task = this.parentNode.parentNode;
+        task.remove();
+    })
 
-
-
+// - 未完了を完了にする処理
+    done.addEventListener('click', function(){
+        let task = this.parentNode.parentNode;
+        document.getElementById('done').appendChild(task);
+    })
 
 })
 
 
-// - 未完了を完了にする処理
-// - 未完了を削除する処理
+
 // - 完了を削除する処理
 // - 画面をリロードしても消えないようにする処理
