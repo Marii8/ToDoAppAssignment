@@ -1,0 +1,106 @@
+body {
+  background-color: #eee;
+}
+/*HEADER-------------------------*/
+header {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  background-color: #70b7b7;
+}
+
+header input {
+  width: 80%;
+  color: #fff;
+  font-size: 16px;
+  text-indent: 18px;
+  background: rgba(255, 255, 255, .2);
+  border-radius: 25px;
+  border: none;
+}
+
+header input:focus {
+  outline: none;
+}
+
+header input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, .7);
+}
+
+header i {
+  color: #fff;
+  cursor: pointer;
+}
+
+header i:hover {
+  opacity: .6;
+}
+
+
+
+/*MAIN--------------------------------*/
+.container {
+  padding: 15px;
+}
+
+.title {
+  margin: 15px 0;
+  padding-left: 3%;
+  color: #555;
+}
+
+/*To Do LIST----------------------*/
+.list li {
+  height: 50px;
+  font-size: 14px;
+  color: #444;
+  line-height: 22px;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  padding: 14px 100px 14px 14px;
+  position: relative;
+}
+
+.list li:last-child {
+  margin-bottom: 0;
+}
+
+.list li .buttons {
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.list li .buttons button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+}
+.list li .buttons button:focus {
+  outline: none;
+}
+
+
+.done:before {
+  content: "";
+  width: 1px;
+  height: 30px;
+  background: #edf0f0;
+}
+
+.list .remove {
+  color: #f44;
+}
+
+.list .done {
+  color: #69b7b7;
+}
+
+
+
