@@ -103,4 +103,22 @@ header i:hover {
 }
 
 
+/*placeholder----------------------*/
+#not-yet:empty::after {
+  content: 'You have no task';
+}
+
+#done:empty::after {
+  content: 'You have yet to complete any tasks';
+}
+
+ul.list#not-yet:after,
+ul.list#done:after{
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: #aaa;
+}
+
+
 
