@@ -1,0 +1,126 @@
+body {
+  background: #edf0f0;
+}
+/*HEADER----------*/
+header {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding: 15px;
+  background: #69b7b7;
+}
+
+header input {
+  width: 80%;
+  border-radius: 20px;
+  text-indent: 18px;
+  color: #fff;
+  background-color: rgba(255, 255, 255, .2);
+  font-size: 16px;
+  border: none;
+}
+
+header input:focus {
+  outline: none;
+}
+
+header input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, .7);
+}
+
+header i {
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+header i:hover {
+  opacity: .6;
+}
+/*HEADER----------*/
+
+/*全体------------*/
+.container {
+  padding: 15px;
+}
+
+.title {
+  margin: 15px 0;
+  padding-left: 3%;
+  color: #777;
+}
+/*全体------------*/
+/*TODO------------*/
+.list li{
+  font-size: 14px;
+  color: #444;
+  line-height: 22px;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  padding: 14px 100px 14px 14px;
+  user-select: none;
+  position: relative;
+}
+
+.list li:last-child {
+  margin-bottom: 0;
+}
+
+.list li .buttons {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100%;
+  background: #ddd;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.list li .buttons button{
+  width: 50px;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+.done::before {
+  content: "";
+  width: 1px;
+  height: 30px;
+  background: #000;
+  
+
+}
+
+.list .remove {
+  color: #f30;
+}
+
+.list .done {
+  color: #69b7b7;
+}
+
+/*コンテンツがない時の表示*/
+#not-yet:empty:after {
+  content: 'You have no task.';
+}
+#done:empty:after{
+  content: 'You have yet to complete any tasks.';
+}
+
+ul.list#not-yet:after,
+ul.list#done:after {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: #aaa;
+}
+
+
+
+/*TODO------------*/
+
+
