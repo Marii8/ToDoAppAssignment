@@ -73,7 +73,7 @@ header i:hover {
   right: 0;
   width: 100px;
   height: 100%;
-  background: #ddd;
+  /*background: #ddd;*/
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -84,6 +84,10 @@ header i:hover {
   border: none;
   cursor: pointer;
   user-select: none;
+}
+
+.list li .buttons button:focus{
+  outline: none;
 }
 
 .done::before {
